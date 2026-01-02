@@ -4,7 +4,7 @@ import CurrentQueue from "../../components/currentqueue/CurrentQueue";
 
 function QueueManagementSystem() {
   const [queues, setQueues] = useState([]);
-  const queuesHandler = (newQueue) => {
+  const addQueueHandler = (newQueue) => {
     setQueues((curr) => [...curr, newQueue]);
   };
   const serveBtnHandler = (id) => {
@@ -30,7 +30,7 @@ function QueueManagementSystem() {
       <p className="text-xl">Manage your customers efficiently</p>
       <div className="flex flex-wrap justify-center w-full">
         <div className="w-2/6 min-w-sm">
-          <AddQueue queuesHandler={queuesHandler} />
+          <AddQueue addQueueHandler={addQueueHandler} />
         </div>
         <div className="w-4/6 min-w-xl">
           <CurrentQueue

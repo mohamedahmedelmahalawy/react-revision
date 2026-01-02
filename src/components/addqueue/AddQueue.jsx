@@ -6,13 +6,14 @@ const initialUser = {
   service: "",
   status: "waiting",
 };
-function AddQueue({ queuesHandler }) {
+function AddQueue({ addQueueHandler }) {
   const [user, setUser] = useState(initialUser);
 
   const submitHandler = (e) => {
     e.preventDefault();
+    if (!user.service.trim() || !user.name.trim()) return;
     setUser(initialUser);
-    queuesHandler({ ...user, id: new Date().getTime() });
+    addQueueHandler({ ...user, id: new Date().getTime() });
   };
   return (
     <form
