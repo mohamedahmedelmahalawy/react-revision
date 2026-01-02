@@ -3,6 +3,7 @@ import QueueManagementSystem from "./pages/queuemanagementsystem/QueueManagement
 function App() {
   return (
     <div>
+      {/*all in one page */}
       <QueueManagementSystem />
     </div>
   );
