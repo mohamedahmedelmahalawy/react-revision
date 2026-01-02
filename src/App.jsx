@@ -1,10 +1,10 @@
-import "./App.css";
+import QueueManagementSystem from "./pages/queuemanagementsystem/QueueManagementSystem";
 
 function App() {
   return (
-    <>
-      <h1 className="text-red-600">Hi</h1>
-    </>
+    <div>
+      <QueueManagementSystem />
+    </div>
   );
 }
 
